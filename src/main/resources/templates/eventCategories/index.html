@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta charset="UTF-8"/>
+    <title>All Categories</title>
+    <header th:replace="fragments :: header"></header>
+</head>
+<body class="container">
+
+    <table>
+        <tr>
+            <th>Category Name</th>
+        </tr>
+        <tr th:each="category : ${categories}">
+            <td th:text="${category.name}">Category Name</td>
+        </tr>
+    </table>
+    <a href="/eventCategories/create">Create Category</a>
+</body>
+</html>
